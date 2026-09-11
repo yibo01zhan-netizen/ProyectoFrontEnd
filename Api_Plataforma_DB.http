@@ -1,0 +1,6 @@
+@Api_Plataforma_DB_HostAddress = http://localhost:5080
+
+GET {{Api_Plataforma_DB_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
