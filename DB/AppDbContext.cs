@@ -10,4 +10,4 @@ namespace Api_Plataforma_DB.DB
         }
         public DbSet<Producto> Producto { get; set; }
     }
-} 
+}

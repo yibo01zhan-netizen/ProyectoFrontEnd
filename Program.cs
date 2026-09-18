@@ -1,5 +1,7 @@
 using Api_Plataforma_DB;
 using Api_Plataforma_DB.DB;
+using Api_Plataforma_DB.Interfaces;
+using Api_Plataforma_DB.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
 
 //DB
 builder.Services.AddDbContext<AppDbContext>(options =>
